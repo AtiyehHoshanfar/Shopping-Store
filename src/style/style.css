@@ -1,0 +1,49 @@
+@import url(./navbar.css);
+/* ! CSS Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--backGroundColor);
+  color: var(--blackPrimary);
+}
+:root {
+  --colorPrimary: #de3618;
+  --colorSecondary: #ff755c;
+  --blackPrimary: #161d25;
+  --blackSecondary: #222f5d;
+  --mainWhite: #ffffff;
+  --grayPrimary: #afafaf;
+  --graySecondary: #e2e2e2;
+  --backGroundColor: #f4f4f4;
+}
+::placeholder {
+  color: var(--grayPrimary);
+  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
