@@ -1,37 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Shopping Store</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- ! Nav-Bar -->
     <nav class="nav-bar">
-        <div class="nav-bar-mobile">
-          <div class="nav-bar__icon">🟠</div>
-          <h1 class="nav-bar__title">Jewelery</h1>
-          <button class="btn nav-search__bar"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div class="nav-bar-mobile">
+        <div class="nav-bar__icon">🟠</div>
+        <h1 class="nav-bar__title">Jewelery</h1>
+        <button class="btn nav-search__bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="nav-bar-desktop">
+        <ul class="nav-list">
+          <li class="nav__item"><a href="">Digitize</a></li>
+
+          <li class="nav__item"><a href="">Categories</a></li>
+          <li class="nav__item"><a href="">Cart</a></li>
+          <li class="nav__item"><a href="">Favorites</a></li>
+        </ul>
+        <div class="nav-bar__search-bar">
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
+          <input
+            type="search"
+            placeholder="search product name , brand , ..."
+          />
         </div>
-        <div class="nav-bar-desktop">
-          <ul class="nav-list">
-            <li class="nav__item"><a href="">Digitize</a></li>
-      
-            <li class="nav__item"><a href="">Categories</a></li>
-            <li class="nav__item"><a href="">Cart</a></li>
-            <li class="nav__item"><a href="">Favorites</a></li>
-          </ul>
-          <div class="nav-bar__search-bar">
-            <div><i class="fa-solid fa-magnifying-glass"></i></div>
-            <input
-              type="search"
-              placeholder="search product name , brand , ..."
-            />
+      </div>
+    </nav>
+    <div class="container">
+      <!-- ! Advanced Filter -->
+
+      <div class="filter-container">
+        <h2 class="filter-container__title">Filter</h2>
+        <div class="filter__header">
+          <div class="filter__title">
+            <i class="fa-solid fa-list"></i>
+            <span>Category </span>
+          </div>
+          <button class="btn chevron">
+            <i class="fa-solid fa-angle-down"></i>
+          </button>
+        </div>
+        <ul class="filter__items">
+          <li class="filter__item" data-category="Electronic">
+            <input type="checkbox" class="checkbox" id="electronic" />
+            <label for="electronic">Electronic</label>
+          </li>
+          <li class="filter__item" data-category="Jewelery">
+            <input type="checkbox" id="jewelery" />
+            <label for="jewelery">Jewelery</label>
+          </li>
+          <li class="filter__item" data-category="Men's Clothing">
+            <input type="checkbox" id="men'sClothing" />
+            <label for="men'sClothing">Men's Clothing</label>
+          </li>
+          <li class="filter__item" data-category="Women's Clothing">
+            <input type="checkbox" id="women'sClothing" />
+            <label for="women'sClothing">Women's Clothing</label>
+          </li>
+        </ul>
+        <div class="filter__header">
+          <div class="filter__title">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Price </span>
           </div>
         </div>
-      </nav>
+        <input type="range" />
+      </div>
+      <!-- ! Filter  -->
+      <div class="filter">
+        <div class="filter-mobile">
+          <div class="filter-mobile__item">
+            <span>➕</span>
+            <span>most-loved</span>
+          </div>
+          <div class="filter-mobile__item">
+            <span>➕</span>
+            <span>filter : brand</span>
+          </div>
+        </div>
+        <div class="filter-desktop">
+          <ul class="filter-desktop__items">
+            <i class="fa-solid fa-arrow-down-short-wide"></i>
+            <li class="filter-desktop__item active">Most Popular</li>
+            <li class="filter-desktop__item active">Most Visited</li>
+            <li class="filter-desktop__item active">Most Expensive</li>
+            <li class="filter-desktop__item active">Least Expensive</li>
+          </ul>
+        </div>
+      </div>
+      <!-- ! card Products -->
+      <div class="card-products">
+        <!-- ? card product -->
+        <div class="card-product">
+          <div class="card-product__image">
+            <img
+              src="/public/images/401408131-GEAR-BAG-20.jpg "
+              alt="apple watch"
+            />
+            <div class="card-product__add-to-favorite">❤️</div>
+          </div>
+          <div class="card-product__description">
+            <div class="description__properties">
+              <div class="property__brand">electronic</div>
+              <div class="property__rating">3.9 ⭐</div>
+            </div>
+            <h2 class="description__title">Lap top</h2>
+            <h3 class="description__price">109.95 $</h3>
+            <button class="description__View-and-order btn">
+              View and Order
+            </button>
+          </div>
+        </div>
+        <!-- ? -->
+        <div class="card-product">
+          <div class="card-product__image">
+            <img
+              src="/public/images/401408131-GEAR-BAG-20.jpg "
+              alt="apple watch"
+            />
+            <div class="card-product__add-to-favorite">❤️</div>
+          </div>
+          <div class="card-product__description">
+            <div class="description__properties">
+              <div class="property__brand">electronic</div>
+              <div class="property__rating">3.9 ⭐</div>
+            </div>
+            <h2 class="description__title">Lap top</h2>
+            <h3 class="description__price">109.95 $</h3>
+            <button class="description__View-and-order btn">
+              View and Order
+            </button>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="card-product__image">
+            <img
+              src="/public/images/401408131-GEAR-BAG-20.jpg "
+              alt="apple watch"
+            />
+            <div class="card-product__add-to-favorite">❤️</div>
+          </div>
+          <div class="card-product__description">
+            <div class="description__properties">
+              <div class="property__brand">electronic</div>
+              <div class="property__rating">3.9 ⭐</div>
+            </div>
+            <h2 class="description__title">Lap top</h2>
+            <h3 class="description__price">109.95 $</h3>
+            <button class="description__View-and-order btn">
+              View and Order
+            </button>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="card-product__image">
+            <img
+              src="/public/images/401408131-GEAR-BAG-20.jpg "
+              alt="apple watch"
+            />
+            <div class="card-product__add-to-favorite">❤️</div>
+          </div>
+          <div class="card-product__description">
+            <div class="description__properties">
+              <div class="property__brand">electronic</div>
+              <div class="property__rating">3.9 ⭐</div>
+            </div>
+            <h2 class="description__title">Lap top</h2>
+            <h3 class="description__price">109.95 $</h3>
+            <button class="description__View-and-order btn">
+              View and Order
+            </button>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="card-product__image">
+            <img
+              src="/public/images/401408131-GEAR-BAG-20.jpg "
+              alt="apple watch"
+            />
+            <div class="card-product__add-to-favorite">❤️</div>
+          </div>
+          <div class="card-product__description">
+            <div class="description__properties">
+              <div class="property__brand">electronic</div>
+              <div class="property__rating">3.9 ⭐</div>
+            </div>
+            <h2 class="description__title">Lap top</h2>
+            <h3 class="description__price">109.95 $</h3>
+            <button class="description__View-and-order btn">
+              View and Order
+            </button>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="card-product__image">
+            <img
+              src="/public/images/401408131-GEAR-BAG-20.jpg "
+              alt="apple watch"
+            />
+            <div class="card-product__add-to-favorite">❤️</div>
+          </div>
+          <div class="card-product__description">
+            <div class="description__properties">
+              <div class="property__brand">electronic</div>
+              <div class="property__rating">3.9 ⭐</div>
+            </div>
+            <h2 class="description__title">Lap top</h2>
+            <h3 class="description__price">109.95 $</h3>
+            <button class="description__View-and-order btn">
+              View and Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./js/App.js" type="module"></script>
-</body>
+  </body>
 </html>
