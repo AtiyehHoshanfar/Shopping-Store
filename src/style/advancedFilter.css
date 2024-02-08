@@ -67,6 +67,7 @@ i {
     grid-row: 1/3;
     margin: 1rem;
     border-radius: 24px;
+    height: auto;
   }
   .filter__header {
     margin-right: 0;

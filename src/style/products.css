@@ -70,9 +70,7 @@
     .property__brand {
       font-size: 1.6rem;
     }
-    .card-product__description .description__title {
-      font-size: 2.2rem;
-    }
+
     .card-product__description .description__price {
       font-size: 1.6rem;
       padding: 0.4rem 0;
